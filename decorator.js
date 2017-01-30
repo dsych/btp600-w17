@@ -1,6 +1,6 @@
-var Label = function(text,x,y){
+var Label = function(labelText,x,y){
 	var that = {};
-	var theText_=text || "";
+	var theText_=labelText || "";
 	var x_=x || 100;
 	var y_=y || 100;
 	var hasBorder_ = true;
