@@ -57,7 +57,7 @@ void setBorder(checked){
 	l.setBorder(checked);
 }
 void setup(){
-	size(500,500);
+	size(500,300);
 	l = new Label("the Label", 100,100);
 }
 void draw(){

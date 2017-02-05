@@ -48,7 +48,7 @@ var borderCheckBox
 function setup(){
 	borderCheckBox = createCheckbox("border", true);
   	borderCheckBox.changed(checkBorder);
-	createCanvas(500,500);
+	createCanvas(500,300);
 	l = Label("the Label", 100,100);
 
 }
