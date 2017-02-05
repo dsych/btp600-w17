@@ -4,8 +4,9 @@ class Label{
 	color borderColour_;
 	bool isFilled_;
 	color fillColour_;
-	bool isBold_;
-	bool isItalics_;
+	bool isStrikeThrough_;
+	bool hasLights_;
+
 	int x_;
 	int y_;
 	Label(string s, int x, int y){
@@ -14,8 +15,8 @@ class Label{
 		y_=y;
 		hasBorder_=true;
 		isFilled_=true;
-		isBold_=false;
-		isItalics_=false;
+		hasLights_=true;
+		isStrikeThrough_=true;
 		borderColour_=color(0,0,0);
 		fillColour_=color(0,255,255);
 	}
@@ -32,11 +33,16 @@ class Label{
 			 rect(x_-30,y_-10,100,20);						
 
 		}
-		if(isItalics_){
-
+		if(isStrikeThrough_){
+			stroke(0,0,0);
+			line(x_,y_-2,x_+50,y_-2);
 		}
-		if (isBold_){
-
+		if (hasLights_){
+			for(int i=0;i<11;i++){
+				fill(255,255,0);
+				stroke(255,255,0);
+				ellipse((x_-30)+i*10,(y_-15),5,5);
+			}
 		}
 
 		fill(0,0,0);
