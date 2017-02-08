@@ -7,7 +7,7 @@ var Label = function(labelText,x,y){
 	var isStrikeThrough_= true;
 	var hasLights_ = true;
 	var isFilled_ = true;
-	var fillColour_ = color(0,255,255); //white
+	var fillColour_ = color('rgba(0,255,255,0.5)'); //white
 	var borderColour_ = color(0,0,0);  //black
 
 	that.draw = function(){

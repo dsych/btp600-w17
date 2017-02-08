@@ -18,7 +18,7 @@ class Label{
 		hasLights_=true;
 		isStrikeThrough_=true;
 		borderColour_=color(0,0,0);
-		fillColour_=color(0,255,255);
+		fillColour_=color(0,255,255,122);
 	}
 	void draw(){
 		if(hasBorder_){
