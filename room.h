@@ -11,8 +11,12 @@ public:
 		description_=desc;
 		cost_=c;
 	}
-	virtual string description() const=0;
-	virtual double cost() const =0;
+	virtual string description() const = 0 {
+		return description_;
+	}
+	virtual double cost() const = 0 {
+		return cost_;
+	}
 };
 
 class Table:public Furniture{
@@ -51,19 +55,20 @@ public:
 };
 class Room{
 	Furniture* furniture_[200];
-	int numTables_;
-	int numChairs_;
-	int numComputers_;
-	int numFurniture_;
+	int numTables_ = 0;
+	int numChairs_ = 0;
+	int numComputers_ = 0;
+	int numFurniture_ = 0;
 public:
 	int numChairs() const{return numChairs_;}
 	int numTables() const{return numTables_;}
 	int numComputers() const{return numComputers_;}
 	double cost() const{
-		double cost;
+		double cost = 0;
 		for(int i=0;i<numFurniture_;i++){
 			cost+=furniture_[i]->cost();
 		}
+		return cost;
 	}
 	void addChair(string desc, double cost){
 		numChairs_++;
